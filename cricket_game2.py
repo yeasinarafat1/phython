@@ -4,9 +4,8 @@
  than you are out otherwise your scoreboard will extend acording to your choosen number '''
 '''In boaling mode you have to choose a number between 1-6 if your choosen number is same as computer choosen number 
 then computer will be out otherwise computer scoreboard will extend'''
-import random
-import time
 i =1
+import random
 while i>0:
     if(i==0):
         print("Exited from game successfully") 
@@ -20,9 +19,6 @@ while i>0:
         print("You have won the toss now your bating")
         for i in range(0,1000):
             user = int(input("Enter your number between 1-6: "))
-            print("computer is thinking......")
-            time.sleep(1)
-
             comp = random.randint(1,6)
     # user_score = 0
             if(user==comp):
@@ -40,8 +36,6 @@ while i>0:
                 print(f"Total score {user_score}")
         for i in range(1,1000):
             user = int(input("Enter your number between 1-6: "))
-            print("computer is thinking........")
-            time.sleep(1)
             comp = random.randint(1,6)
             comp_score = comp_score + comp
             if(user==comp and comp_score==user_score):
@@ -49,8 +43,7 @@ while i>0:
                 print("Match Draw!")
                 break
             elif(user==comp):
-                print(f"computer is out!")
-                print(f"computer has scored {comp_score} run")
+                print(f"computer is out and scored {comp_score} run")
                 print(f"You have won the game by {user_score - comp_score} run")
                 comp_score = comp_score - comp
                 break
@@ -75,8 +68,6 @@ while i>0:
         print("Computer will bat first")
         for i in range(0,1000):
             user = int(input("Enter your number between 1-6: "))
-            print("computer is thinking........")
-            time.sleep(1)
             comp = random.randint(1,6)
     # user_score = 0
             if(user==comp):
@@ -93,8 +84,6 @@ while i>0:
                 print(f"Total score {comp_score}")
         for i in range(0,1000):
             user = int(input("Enter your number between 1-6: "))
-            print("computer is thinking........")
-            time.sleep(1)
             comp = random.randint(1,6)
             user_score = user_score + user
             if(user==comp and user_score == comp_score):
@@ -125,10 +114,10 @@ while i>0:
                 print(f"You have to score {comp_score-user_score+1} to win")
     i = int(input("press 1 for continue & 0 for exit: "))
  
-# if(i==0):
-#     print("Exited from game successfully") 
-# else:
-#     print("Game is continueing")      
+if(i==0):
+    print("Exited from game successfully") 
+else:
+    print("Game is continueing")      
         
         
     
